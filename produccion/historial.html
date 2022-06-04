@@ -49,17 +49,17 @@
 
 
         .thead-green {
-          background-color: rgb(0, 99, 71);
+          background-color: rgb( 98, 149, 213);
           color: white;
         }
 
         .table-striped tbody tr:nth-of-type(odd) {
-          background-color: rgb(217, 235, 235);
+          background-color: rgb(98, 149, 213, 0.3);
         }
 
         .table-hover tbody tr:hover {
-              background-color: rgba(122, 114, 81, 0.7);
-              color: rgb(112, 24, 78);
+              background-color: rgba(127, 179, 213, 0.7);
+              color: rgb( 98, 149, 213);
         }
     </style>
 </head>
@@ -102,9 +102,9 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Registar</a>
-                            <a class="nav-link" href="layout-static.html">Historial</a>
-                            <a class="nav-link" href="layout-static.html">Registar Materias Primas</a>
+                            <a class="nav-link" href="registro.html">Registar</a>
+                            <a class="nav-link" href="historial.html">Historial</a>
+                            <a class="nav-link" href="registromateria.html">Registar Materias Primas</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -135,9 +135,9 @@
                     </a>
                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="401.html">401 Page</a>
-                            <a class="nav-link" href="404.html">404 Page</a>
-                            <a class="nav-link" href="500.html">500 Page</a>
+                            <a class="nav-link" href="../error-403.html">403 Page</a>
+                            <a class="nav-link" href="../error-404.html">404 Page</a>
+                            <a class="nav-link" href="../error-500.html">500 Page</a>
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Addons</div>
@@ -158,28 +158,21 @@
             <div class="container-fluid px-4">
                 <h1 class="mt-4">HISTORIAL</h1>
             </div>
+            <div class="container-fluid">
             <div class="table-responsive" id="mydatatable-container">
                 <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
                     <thead class="thead-green">
                         <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                            <th>Column 3</th>
-                            <th>Column 4</th>
-                            <th>Column 5</th>
-                            <th>Column 6</th>
-                            <th>Column 7</th>
-                            <th>Column 8</th>
-                            <th>Column 9</th>
-                            <th>Column 10</th>
+                            <th>Fecha</th>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>N° Factura</th>
+                            <th>Conductor</th>
+                            <th>Valor Factura</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Filter..</th>
-                            <th>Filter..</th>
-                            <th>Filter..</th>
-                            <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
                             <th>Filter..</th>
@@ -196,10 +189,6 @@
                             <td>item 0 3</td>
                             <td>item 0 4</td>
                             <td>item 0 5</td>
-                            <td>item 0 6</td>
-                            <td>item 0 7</td>
-                            <td>item 0 8</td>
-                            <td>item 0 9</td>
                         </tr>
                         <tr>
                             <td>item 1 0</td>
@@ -208,10 +197,6 @@
                             <td>item 1 3</td>
                             <td>item 1 4</td>
                             <td>item 1 5</td>
-                            <td>item 1 6</td>
-                            <td>item 1 7</td>
-                            <td>item 1 8</td>
-                            <td>item 1 9</td>
                         </tr>
                         <tr>
                             <td>item 2 0</td>
@@ -220,13 +205,10 @@
                             <td>item 2 3</td>
                             <td>item 2 4</td>
                             <td>item 2 5</td>
-                            <td>item 2 6</td>
-                            <td>item 2 7</td>
-                            <td>item 2 8</td>
-                            <td>item 2 9</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
             </div>
         </main>
         <footer class="py-4 bg-light mt-auto">
