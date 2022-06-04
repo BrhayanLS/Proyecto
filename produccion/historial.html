@@ -8,22 +8,69 @@
     <meta name="author" content="" />
     <title>System Information Paralon</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="">
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>
- 
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/historial.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+
+    <!--font awesome-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <!--JUSTIFICA EL ANCHO DE COLUMNAS AL 100% DENTRO DE LAS PÁGINAS Y ESCONDE EL SCROLL HORIZONTAL-->
+    <style>
+        #mydatatable tfoot input {
+            width: 100% !important;
+        }
+
+        #mydatatable tfoot {
+            display: table-header-group !important;
+        }
+
+
+        .thead-green {
+          background-color: rgb(0, 99, 71);
+          color: white;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+          background-color: rgb(217, 235, 235);
+        }
+
+        .table-hover tbody tr:hover {
+              background-color: rgba(122, 114, 81, 0.7);
+              color: rgb(112, 24, 78);
+        }
+    </style>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-       <!-- Navbar Brand -->
-       <a class="navbar-brand ps-3" href="index.html">System Information Paralon</a>
-       <!-- Sidebar Toggle -->
-       <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-       <!-- Navbar Search -->
-       <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+     <!-- Navbar Brand -->
+     <a class="navbar-brand ps-3" href="index.html">System Information Paralon</a>
+     <!-- Sidebar Toggle -->
+     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+     <!-- Navbar Search -->
+     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
             <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
             <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
@@ -111,29 +158,159 @@
             <div class="container-fluid px-4">
                 <h1 class="mt-4">HISTORIAL</h1>
             </div>
-            <div class="container"> 
-                
+            <div class="table-responsive" id="mydatatable-container">
+                <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+                    <thead class="thead-green">
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                            <th>Column 4</th>
+                            <th>Column 5</th>
+                            <th>Column 6</th>
+                            <th>Column 7</th>
+                            <th>Column 8</th>
+                            <th>Column 9</th>
+                            <th>Column 10</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                            <th>Filter..</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>item 0 0</td>
+                            <td>item 0 1</td>
+                            <td>item 0 2</td>
+                            <td>item 0 3</td>
+                            <td>item 0 4</td>
+                            <td>item 0 5</td>
+                            <td>item 0 6</td>
+                            <td>item 0 7</td>
+                            <td>item 0 8</td>
+                            <td>item 0 9</td>
+                        </tr>
+                        <tr>
+                            <td>item 1 0</td>
+                            <td>item 1 1</td>
+                            <td>item 1 2</td>
+                            <td>item 1 3</td>
+                            <td>item 1 4</td>
+                            <td>item 1 5</td>
+                            <td>item 1 6</td>
+                            <td>item 1 7</td>
+                            <td>item 1 8</td>
+                            <td>item 1 9</td>
+                        </tr>
+                        <tr>
+                            <td>item 2 0</td>
+                            <td>item 2 1</td>
+                            <td>item 2 2</td>
+                            <td>item 2 3</td>
+                            <td>item 2 4</td>
+                            <td>item 2 5</td>
+                            <td>item 2 6</td>
+                            <td>item 2 7</td>
+                            <td>item 2 8</td>
+                            <td>item 2 9</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-    </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-<script src="assets/demo/chart-area-demo.js"></script>
-<script src="assets/demo/chart-bar-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-<script src="js/datatables-simple-demo.js"></script>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="../assets/demo/chart-area-demo.js"></script>
+    <script src="../assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mydatatable tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Filtrar.." />');
+            });
+
+            var table = $('#mydatatable').DataTable({
+                "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+                "responsive": true,
+                "language": {
+                    /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+                    "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+                },
+                "order": [
+                [0, "desc"]
+                ],
+                "initComplete": function () {
+                    this.api().columns().every(function () {
+                        var that = this;
+
+                        $('input', this.footer()).on('keyup change', function () {
+                            if (that.search() !== this.value) {
+                                that
+                                .search(this.value)
+                                .draw();
+                            }
+                        });
+                    })
+                },
+                /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+                "buttons": [
+                {
+                    extend: 'csvHtml5',
+                    text:   '<i class="fas fa-file-csv"></i>',
+                    titleAttr: 'Export a Csv',
+                    className: 'btn btn-danger' 
+                },
+                {
+                    extend: 'excelHtml5',
+                    text:   '<i class="fas fa-file-excel"></i>',
+                    titleAttr: 'Export a Excel',
+                    className: 'btn btn-success' 
+                },
+
+                {
+                    extend: 'pdfHtml5',
+                    text:   '<i class="fas fa-file-pdf"></i>',
+                    titleAttr: 'Export a .Pdf',
+                    className: 'btn btn-primary' 
+                },
+
+                {
+                    extend: 'print',
+                    text:   '<i class="fa fa-print" aria-hidden="true"></i>',
+                    titleAttr: 'Imprimir',
+                    className: 'btn btn-primary' 
+                },
+                /* 'csv', 'excel', 'pdf', 'print' */
+                ]
+            });
+        });
+    </script>
 </body>
 </html>
