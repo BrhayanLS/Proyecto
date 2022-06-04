@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Registro Pedido</title>
+    <title>System Information Paralon</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="../css/registrar.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/registrar.css">
     <link href="../css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-<body>
-	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-       <!-- Navbar Brand -->
-       <a class="navbar-brand ps-3" href="index.html">System Information Paralon</a>
-       <!-- Sidebar Toggle -->
-       <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-       <!-- Navbar Search -->
-       <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+     <!-- Navbar Brand -->
+     <a class="navbar-brand ps-3" href="index.html">System Information Paralon</a>
+     <!-- Sidebar Toggle -->
+     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+     <!-- Navbar Search -->
+     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
             <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
             <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
@@ -44,51 +44,51 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Modulos</div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Produccion
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Registar</a>
-                            <a class="nav-link" href="layout-static.html">Historial</a>
-                            <a class="nav-link" href="layout-static.html">Registar Materias Primas</a>
-                        </nav>
-                    </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                        Materia Prima
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Lista de Productos</a>
-                            <a class="nav-link" href="layout-static.html">Registro de Producto</a>
-                            <a class="nav-link" href="layout-static.html">Entrada de Producto</a>
-                        </nav>
-                    </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Produccion
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Registar</a>
+                                <a class="nav-link" href="layout-static.html">Historial</a>
+                                <a class="nav-link" href="layout-static.html">Registar Materias Primas</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Materia Prima
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Lista de Productos</a>
+                                <a class="nav-link" href="layout-static.html">Registro de Producto</a>
+                                <a class="nav-link" href="layout-static.html">Entrada de Producto</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Autenticacion
-                    </a>
-                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="login.html">Ingresar</a>
-                            <a class="nav-link" href="register.html">Registrar</a>
-                        </nav>
-                    </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                        Error
+                        </a>
+                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="login.html">Ingresar</a>
+                                <a class="nav-link" href="register.html">Registrar</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                            Error
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="401.html">401 Page</a>
-                            <a class="nav-link" href="404.html">404 Page</a>
-                            <a class="nav-link" href="500.html">500 Page</a>
-                        </nav>
-                    </div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="401.html">401 Page</a>
+                                <a class="nav-link" href="404.html">404 Page</a>
+                                <a class="nav-link" href="500.html">500 Page</a>
+                            </nav>
+                        </div>
                     <div class="sb-sidenav-menu-heading">Addons</div>
                     <a class="nav-link" href="charts.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -103,47 +103,75 @@
         </nav>
     </div>
     <div id="layoutSidenav_content">
-        <main>
+        <main class="conten-main">
             <div class="container-fluid px-4">
                 <h1 class="mt-4">Registro De Pedido</h1>
             </div>
-            
                 <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-6">
-                        <label for="validationCustom01" class="form-label">Nombre del cliente</label>
-                        <input type="text" class="form-control" id="validationCustom01" required>
+                    <div class="col-md-2">
+                        <label for="validationCustom01" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="validationCustom01" required>
                         <div class="valid-feedback">Bien</div>
                         <div class="invalid-feedback">Llena este campo</div>
                     </div>
                     <div class="col-md-6">
-                        <label for="validationCustom02" class="form-label">Telefono</label>
-                        <input type="number" class="form-control" id="validationCustom02" required>
+                        <label for="validationCustom02" class="form-label">Nombre del cliente</label>
+                        <input type="text" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">Bien</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom03" class="form-label">Telefono</label>
+                        <input type="number" class="form-control" id="validationCustom03" required>
+                        <div class="valid-feedback">Bien</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">N° Factura</label>
+                        <input type="text" class="form-control" id="validationCustom04" required>
+                        <div class="valid-feedback">Bien</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-9">
+                        <label for="validationCustom05" class="form-label">Conductor</label>
+                        <input type="text" class="form-control" id="validationCustom05" required>
                         <div class="valid-feedback">Bien</div>
                         <div class="invalid-feedback">Llena este campo</div>
                     </div>
                
 
-                    <div class="col-md-5">
-                        <label for="validationCustom03" class="form-label">Direccion</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="valid-feedback">Bien</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="validationCustom04" required>
+                    <div class="col-md-2">
+                        <label for="validationCustom06" class="form-label">Cantidad</label>
+                        <input type="text" class="form-control" id="validationCustom06" required>
                         <div class="valid-feedback">Bien</div>
                         <div class="invalid-feedback">Llena este campo</div>
                     </div>
                     <div class="col-md-4">
-                        <label for="validationCustom05" class="form-label">Barrio</label>
-                        <input type="text" class="form-control" id="validationCustom05" required>
+                        <label for="validationCustom07" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="validationCustom07" required>
                         <div class="valid-feedback">Bien</div>
                         <div class="invalid-feedback">Llena este campo</div>
                     </div>
+                    <div class="col-md-3">
+                        <label for="validationCustom08" class="form-label">Valor</label>
+                        <input type="number" class="form-control" id="validationCustom08" required>
+                        <div class="valid-feedback">Bien</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationCustom09" class="form-label">Valor factura</label>
+                        <input type="number" class="form-control" id="validationCustom09" required>
+                        <div class="valid-feedback">Bien</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    
                 
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
+                <div class="col-1">
+                    <button class="btn btn-primary" type="submit">Agregar</button>
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
             </form>
         </main>
