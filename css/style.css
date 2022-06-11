@@ -69,6 +69,10 @@ html {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
+.color-calendar {
+  color: #fff;
+  background-color: #888;
+}
 .wrapper {
   position: relative;
   max-width: 1280px;
@@ -142,6 +146,7 @@ header > .wrapper a {
 .c-monthyear {
   display: -webkit-box;
   display: flex;
+  justify-content: center;
 }
 .c-month {
   position: relative;
@@ -156,6 +161,9 @@ header > .wrapper a {
   line-height: 80px;
   text-align: center;
   overflow: hidden;
+}
+.c-sort{
+  display: flex;
 }
 .c-month #c-paginator .c-paginator__month {
   position: absolute;
