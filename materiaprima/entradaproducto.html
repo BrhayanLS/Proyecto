@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Entrada Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="../css/registrar.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+       <!-- Navbar Brand -->
+       <a class="navbar-brand ps-3" href="index.html">System Information Paralon</a>
+       <!-- Sidebar Toggle -->
+       <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+       <!-- Navbar Search -->
+       <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <!-- <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" /> -->
+            <!-- <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button> -->
+        </div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
+                <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> -->
+                <!-- <li><hr class="dropdown-divider" /></li> -->
+                <!-- <li><a class="dropdown-item" href="#!">Logout</a></li> -->
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Modulos</div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Produccion
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-static.html">Registar</a>
+                            <a class="nav-link" href="layout-static.html">Historial</a>
+                            <a class="nav-link" href="layout-static.html">Registar Materias Primas</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Materia Prima
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-static.html">Lista de Productos</a>
+                            <a class="nav-link" href="layout-static.html">Registro de Producto</a>
+                            <a class="nav-link" href="layout-static.html">Entrada de Producto</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Autenticacion
+                    </a>
+                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="login.html">Ingresar</a>
+                            <a class="nav-link" href="register.html">Registrar</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Error
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="401.html">401 Page</a>
+                            <a class="nav-link" href="404.html">404 Page</a>
+                            <a class="nav-link" href="500.html">500 Page</a>
+                        </nav>
+                    </div>
+                    </div>
+            </div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Entrada de Prodcuto</h1>
+            </div>
+            
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">Codigo Producto</label>
+                        <input type="text" class="form-control" id="validationCustom01" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Nombre Prodcuto</label>
+                        <input type="text" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+               
+
+                    <div class="col-md-5">
+                        <label for="validationCustom03" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="validationCustom03" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">Nombre quien Recibe</label>
+                        <input type="text" class="form-control" id="validationCustom04" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom05" class="form-label">Nombre Proveedor</label>
+                        <input type="text" class="form-control" id="validationCustom05" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom05" class="form-label">Fecha entrada Producto</label>
+                        <input type="date" class="form-control" id="validationCustom05" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom05" class="form-label">Hora entrada Producto</label>
+                        <input type="time" class="form-control" id="validationCustom05" required>
+                        <div class="valid-feedback">OK</div>
+                        <div class="invalid-feedback">Llena este campo</div>
+                    </div>
+                
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" href="../MateriaPrima/materiaprima.html">Registrar Producto</button>
+                </div>
+            </form>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+  }, false)
+  })
+})()
+</script>
+
+</footer>
+</div>
+</body>
+</html>
