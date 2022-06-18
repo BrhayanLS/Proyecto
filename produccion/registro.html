@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/resgistromatteria.css">
     <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../sweetalert/dist/sweetalert2.min.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
@@ -200,10 +201,10 @@
 
 
           <div class="col-1">
-            <button class="btn btn-primary" type="submit">Agregar</button>
+            <a><button onclick="agregar()" class="btn btn-primary" type="submit">Agregar</button></a>
         </div>
         <div class="col-1">
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <a><button class="btn btn-primary" type="submit">Enviar</button></a>
         </div>
     </form>
 </div>
@@ -250,5 +251,7 @@
   })
 })()
 </script>
+<script src="../sweetalert/dist/sweetalert2.all.min.js"></script>
+<script src="../alertas.js"></script>
 </body>
 </html>
