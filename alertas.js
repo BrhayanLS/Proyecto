@@ -25,3 +25,8 @@ function agregar()
 		timer: 1500
 	})
 }
+
+function registrar()
+{
+	Swal.fire('El pedido se ha registrado exitosamente!!')
+}
