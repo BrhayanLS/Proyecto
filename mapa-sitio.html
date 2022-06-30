@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Entrada Producto</title>
+    <title>System Information Paralon</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="../css/registrar.css" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/mpa-sitio.css">
+    <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-<body>
-	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
        <!-- Navbar Brand -->
-       <a class="navbar-brand ps-3" href="index.html"><img src="../img/logo.jpg"></a>
+       <a class="navbar-brand ps-3" href="index.html"><img src="img/logo.jpg"></a>
        <!-- Sidebar Toggle -->
        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
        <!-- Navbar Search -->
        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-        
+
        </form>
        <!-- Navbar-->
        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -48,10 +48,10 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="registro.html">Registar</a>
-                            <a class="nav-link" href="historial.html">Historial</a>
-                            <a class="nav-link" href="registromateria.html">Registar Materias Primas</a>
-                            <a class="nav-link" href="calendario.html">Calendario</a>
+                            <a class="nav-link" href="produccion/registro.html">Registar</a>
+                            <a class="nav-link" href="produccion/historial.html">Historial</a>
+                            <a class="nav-link" href="produccion/registromateria.html">Registar Materias Primas</a>
+                            <a class="nav-link" href="produccion/calendario.html">Calendario</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -72,8 +72,8 @@
                     </a>
                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="../login.html">Ingresar</a>
-                            <a class="nav-link" href="../register.html">Registrar</a>
+                            <a class="nav-link" href="login.html">Ingresar</a>
+                            <a class="nav-link" href="register.html">Registrar</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
@@ -82,10 +82,10 @@
                     </a>
                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="../401.html">403 Page</a>
-                            <a class="nav-link" href="../404.html">404 Page</a>
-                            <a class="nav-link" href="../500.html">500 Page</a>
-                            <a class="nav-link" href="../mapa-sitio.html">Mapa Del Sitio</a>
+                            <a class="nav-link" href="error-403.html">403 Page</a>
+                            <a class="nav-link" href="error-404.html">404 Page</a>
+                            <a class="nav-link" href="error-500.html">500 Page</a>
+                            <a class="nav-link" href="mapa-sitio.html">Mapa Del Sitio</a>
                         </nav>
                     </div>
                 </div>
@@ -95,59 +95,41 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Entrada de Prodcuto</h1>
+                <h1 class="mt-4">Mapa del sitio</h1>
             </div>
-            
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-6">
-                        <label for="validationCustom01" class="form-label">Codigo Producto</label>
-                        <input type="text" class="form-control" id="validationCustom01" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom02" class="form-label">Nombre Prodcuto</label>
-                        <input type="text" class="form-control" id="validationCustom02" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-               
-
-                    <div class="col-md-5">
-                        <label for="validationCustom03" class="form-label">Cantidad</label>
-                        <input type="number" class="form-control" id="validationCustom03" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">Nombre quien Recibe</label>
-                        <input type="text" class="form-control" id="validationCustom04" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom05" class="form-label">Nombre Proveedor</label>
-                        <input type="text" class="form-control" id="validationCustom05" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom05" class="form-label">Fecha entrada Producto</label>
-                        <input type="date" class="form-control" id="validationCustom05" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom05" class="form-label">Hora entrada Producto</label>
-                        <input type="time" class="form-control" id="validationCustom05" required>
-                        <div class="valid-feedback">OK</div>
-                        <div class="invalid-feedback">Llena este campo</div>
-                    </div>
-                
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit" href="../MateriaPrima/materiaprima.html">Registrar Producto</button>
-                </div>
-            </form>
+            <div class="container"> 
+                <ul>
+                    <li>Inicio
+                        <ul>
+                            <li><a href="index.html">Pagina Principal</a></li>
+                            <li><a href="login.html">Pagina De Ingreso</a></li>
+                        </ul>
+                    </li>
+                    <li>Produccion
+                        <ul>
+                            <li><a href="produccion/registro.html">Registrar</a></li>
+                            <li><a href="produccion/historial.html">Historial</a></li>
+                            <li><a href="produccion/registromateria.html">Registrar materias primas</a></li>
+                            <li><a href="produccion/calendario.html">Calendario</a></li>
+                        </ul>
+                    </li>
+                    <li>Materia Prima
+                        <ul>
+                            <li><a href="materiaprima/entradaproducto.html">Entrada De Producto</a></li>
+                            <li><a href="materiaprima/materiaprima.html">Lista De Productos</a></li>
+                            <li><a href="materiaprima/registroproducto.html">Registro De Productos</a></li>
+                        </ul>
+                    </li>
+                    <li>Otras Paginas
+                        <ul>
+                            <li><a href="error-403.html">Entrada De Producto</a></li>
+                            <li><a href="error-404.html">Lista De Productos</a></li>
+                            <li><a href="error-500.html">Registro De Productos</a></li>
+                            <li><a href="mapa-sitio.html">Mapa Del Sitio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </main>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
@@ -160,31 +142,14 @@
                     </div>
                 </div>
             </div>
-
-            <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-  .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-  }, false)
-  })
-})()
-</script>
-
-</footer>
-</div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </body>
 </html>
