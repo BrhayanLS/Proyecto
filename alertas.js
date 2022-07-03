@@ -30,3 +30,10 @@ function registrar()
 {
 	Swal.fire('El pedido se ha registrado exitosamente!!')
 }
+function registrarCliente()
+{
+	Swal.fire(
+  'Usuario registrado con exio!',
+  'success'
+)
+}
