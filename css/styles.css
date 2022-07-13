@@ -2109,7 +2109,7 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #212529;
+  --bs-table-bg: #405781;
   --bs-table-striped-bg: #2c3034;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #373b3e;
@@ -2192,10 +2192,10 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #26344e;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #4d689b;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -3046,13 +3046,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0d111a;
+  border-color: #0d111a;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  color: #668bcf;
+  background-color: #26344e;
+  border-color: #0d111a;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;

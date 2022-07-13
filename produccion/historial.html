@@ -7,10 +7,12 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>System Information Paralon</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/resgistromatteria.css">
     <link href="../css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../css/historial.css">
+    <link rel="stylesheet" href="../sweetalert/dist/sweetalert2.min.css">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -50,10 +52,10 @@
 
         .thead-green {
             background-color: rgb( 98, 149, 214);
-          color: white;
-      }
+            color: white;
+        }
 
-      .table-striped tbody tr:nth-of-type(odd) {
+        .table-striped tbody tr:nth-of-type(odd) {
           background-color: rgb(98, 149, 213, 0.3);
       }
 
@@ -71,10 +73,10 @@
      <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
      <!-- Navbar Search -->
      <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-        
-    </form>
-    <!-- Navbar-->
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+
+     </form>
+     <!-- Navbar-->
+     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -103,7 +105,8 @@
                             <a class="nav-link" href="historial.html">Historial</a>
                             <a class="nav-link" href="registromateria.html">Registar Materias Primas</a>
                             <a class="nav-link" href="calendario.html">Calendario</a>
-                                <a class="nav-link" href="calendario.html">registrocliente</a>
+                            <a class="nav-link" href="registrocliente.html">Registrar Cliente</a>
+                            <a class="nav-link" href="registroEmpleado.html">Registrar Empleado</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -202,6 +205,46 @@
                 </div>
             </div>
         </main>
+        <div class="container">
+            <h2>Ventas Semanales</h2>
+            <canvas id="myChart"></canvas>
+            <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Semana 10', 'Semana 11', 'Semana 12', 'Semana 13', 'Semana 14', 'Semana 15'],
+                        datasets: [{
+                            data: [1.2, 1.9, 3.0, 2.0, 2.5, 3.3],
+                            backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
